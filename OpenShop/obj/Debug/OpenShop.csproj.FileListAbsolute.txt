@@ -1,0 +1,16 @@
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\OpenShop.exe.config
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\OpenShop.exe
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\OpenShop.pdb
+C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.csprojAssemblyReference.cache
+C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.Properties.Resources.resources
+C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.csproj.GenerateResource.cache
+C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.exe
+C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.pdb
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\Newtonsoft.Json.dll
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\Newtonsoft.Json.xml
+C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.csproj.CopyComplete
+C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.VentanaPago.resources
+C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.RegistroTarjeta.resources
+C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.ConfirmacionCompra.resources
+C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.PaginaInicial.resources

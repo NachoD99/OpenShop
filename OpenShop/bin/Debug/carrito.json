@@ -1,0 +1,69 @@
+
+    {
+    "IdVenta": 1,
+    "ArticulosVendidos":
+        [
+            {
+                "IdArticulo": 1,
+                "Nombre": "Iphone s6",
+                "Marca": "Apple",
+                "Precio": 100000.00,
+                "Descripcion": "celular"
+            },
+            {
+                "IdArticulo": 2,
+                "Nombre": "Mouse Gamer",
+                "Marca": "Nisuta",
+                "Precio": 850.00,
+                "Descripcion": "mouse alámbrico"
+            },
+            {
+                "IdArticulo": 3,
+                "Nombre": "Smart TV",
+                "Marca": "Samsung",
+                "Precio": 75000.00,
+                "Descripcion": "Televisor 30' modelo 2019"
+            },
+            {
+                "IdArticulo": 4,
+                "Nombre": "Earbuds GT1",
+                "Marca": "Xiaomi",
+                "Precio": 2500.00,
+                "Descripcion": "Auriculares Earbuds Haylou GT1 negros"
+            }
+        ], 
+    "Cliente": 
+        {    
+        "IdCliente": "1",
+        "Nombre": "Ignacio",
+        "Apellido": "Davanzo",
+        "Correo": "nachodavanzo@gmail.com",
+        "Usuario": "Nacho Davanzo",
+        "Contraseña": "0123456789",
+        "Dni": "42245506",
+        "Domicilio": "Larrea 692",
+	"Ciudad": "San Francisco",
+	"Provincia": "Córdoba",
+	"Tarjeta":
+		[
+		{
+		  "NumeroDeTarjeta":1234567891234567,
+        	  "NombreTitular":"Ignacio",
+        	  "CodigoDeSeguridad":123,
+        	  "EntidadEmisora":"Santander",
+        	  "FechaDeVencimiento":"12/22",
+        	  "DniTitular":42245506,
+        	  "TipoTarjeta":"Débito"
+		},
+		{
+		  "NumeroDeTarjeta":9876543211234567,
+        	  "NombreTitular":"Ignacio",
+        	  "CodigoDeSeguridad":789,
+        	  "EntidadEmisora":"Macro",
+        	  "FechaDeVencimiento":"10/23",
+        	  "DniTitular":42245506,
+        	  "TipoTarjeta":"Crédito"
+		}
+		]
+        }
+    }
