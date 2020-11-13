@@ -8,30 +8,36 @@
                 "Nombre": "Iphone s6",
                 "Marca": "Apple",
                 "Precio": 100000.00,
-                "Descripcion": "celular"
+                "Descripcion": "celular",
+		"Cantidad": 1
             },
             {
                 "IdArticulo": 2,
                 "Nombre": "Mouse Gamer",
                 "Marca": "Nisuta",
                 "Precio": 850.00,
-                "Descripcion": "mouse alámbrico"
+                "Descripcion": "mouse alámbrico",
+		"Cantidad": 1
             },
             {
                 "IdArticulo": 3,
                 "Nombre": "Smart TV",
                 "Marca": "Samsung",
                 "Precio": 75000.00,
-                "Descripcion": "Televisor 30' modelo 2019"
+                "Descripcion": "Televisor 30' modelo 2019",
+		"Cantidad": 1
             },
             {
                 "IdArticulo": 4,
                 "Nombre": "Earbuds GT1",
                 "Marca": "Xiaomi",
                 "Precio": 2500.00,
-                "Descripcion": "Auriculares Earbuds Haylou GT1 negros"
+                "Descripcion": "Auriculares Earbuds Haylou GT1 negros",
+		"Cantidad": 1
             }
         ], 
+	"FechaVenta":"2020-11-12T19:53:36.4220327-03:00",
+	"Monto": 178750,
     "Cliente": 
         {    
         "IdCliente": "1",

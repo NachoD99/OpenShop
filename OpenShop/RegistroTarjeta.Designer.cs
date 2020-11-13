@@ -63,71 +63,80 @@
             // 
             // botonVolver
             // 
-            this.botonVolver.Location = new System.Drawing.Point(688, 398);
+            this.botonVolver.BackColor = System.Drawing.Color.Black;
+            this.botonVolver.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonVolver.ForeColor = System.Drawing.Color.White;
+            this.botonVolver.Location = new System.Drawing.Point(12, 398);
             this.botonVolver.Name = "botonVolver";
-            this.botonVolver.Size = new System.Drawing.Size(75, 23);
+            this.botonVolver.Size = new System.Drawing.Size(98, 40);
             this.botonVolver.TabIndex = 0;
             this.botonVolver.Text = "Volver";
-            this.botonVolver.UseVisualStyleBackColor = true;
+            this.botonVolver.UseVisualStyleBackColor = false;
             this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(128, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 13);
+            this.label1.Size = new System.Drawing.Size(180, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Número de la tarjeta";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(128, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.Size = new System.Drawing.Size(160, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre del titular";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(128, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 13);
+            this.label3.Size = new System.Drawing.Size(178, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "Codigo de seguridad";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(128, 207);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 13);
+            this.label4.Size = new System.Drawing.Size(151, 22);
             this.label4.TabIndex = 4;
             this.label4.Text = "Entidad bancaria";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(128, 253);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 13);
+            this.label5.Size = new System.Drawing.Size(186, 22);
             this.label5.TabIndex = 5;
             this.label5.Text = "Fecha de vencimiento";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(128, 303);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 13);
+            this.label6.Size = new System.Drawing.Size(129, 22);
             this.label6.TabIndex = 6;
             this.label6.Text = "DNI del titular";
             // 
             // numeroIngresado
             // 
-            this.numeroIngresado.Location = new System.Drawing.Point(337, 60);
+            this.numeroIngresado.Location = new System.Drawing.Point(337, 68);
             this.numeroIngresado.Name = "numeroIngresado";
             this.numeroIngresado.Size = new System.Drawing.Size(121, 20);
             this.numeroIngresado.TabIndex = 7;
@@ -135,7 +144,7 @@
             // 
             // nombreIngresado
             // 
-            this.nombreIngresado.Location = new System.Drawing.Point(337, 107);
+            this.nombreIngresado.Location = new System.Drawing.Point(337, 115);
             this.nombreIngresado.Name = "nombreIngresado";
             this.nombreIngresado.Size = new System.Drawing.Size(121, 20);
             this.nombreIngresado.TabIndex = 8;
@@ -143,7 +152,7 @@
             // 
             // codigoSeguridadIngresado
             // 
-            this.codigoSeguridadIngresado.Location = new System.Drawing.Point(337, 154);
+            this.codigoSeguridadIngresado.Location = new System.Drawing.Point(337, 162);
             this.codigoSeguridadIngresado.Name = "codigoSeguridadIngresado";
             this.codigoSeguridadIngresado.Size = new System.Drawing.Size(121, 20);
             this.codigoSeguridadIngresado.TabIndex = 9;
@@ -151,7 +160,7 @@
             // 
             // entidadIngresada
             // 
-            this.entidadIngresada.Location = new System.Drawing.Point(337, 200);
+            this.entidadIngresada.Location = new System.Drawing.Point(337, 208);
             this.entidadIngresada.Name = "entidadIngresada";
             this.entidadIngresada.Size = new System.Drawing.Size(121, 20);
             this.entidadIngresada.TabIndex = 10;
@@ -159,7 +168,7 @@
             // 
             // fechaIngresada
             // 
-            this.fechaIngresada.Location = new System.Drawing.Point(337, 246);
+            this.fechaIngresada.Location = new System.Drawing.Point(337, 254);
             this.fechaIngresada.Name = "fechaIngresada";
             this.fechaIngresada.Size = new System.Drawing.Size(121, 20);
             this.fechaIngresada.TabIndex = 11;
@@ -167,7 +176,7 @@
             // 
             // dniIngresado
             // 
-            this.dniIngresado.Location = new System.Drawing.Point(337, 296);
+            this.dniIngresado.Location = new System.Drawing.Point(337, 304);
             this.dniIngresado.Name = "dniIngresado";
             this.dniIngresado.Size = new System.Drawing.Size(121, 20);
             this.dniIngresado.TabIndex = 12;
@@ -176,10 +185,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(288, 19);
+            this.label7.Font = new System.Drawing.Font("Felix Titling", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(246, 18);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(188, 25);
+            this.label7.Size = new System.Drawing.Size(298, 28);
             this.label7.TabIndex = 13;
             this.label7.Text = "Registro de tarjeta";
             // 
@@ -209,20 +218,24 @@
             // 
             // botonCargarTarjeta
             // 
-            this.botonCargarTarjeta.Location = new System.Drawing.Point(87, 398);
+            this.botonCargarTarjeta.BackColor = System.Drawing.Color.Black;
+            this.botonCargarTarjeta.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonCargarTarjeta.ForeColor = System.Drawing.Color.White;
+            this.botonCargarTarjeta.Location = new System.Drawing.Point(660, 398);
             this.botonCargarTarjeta.Name = "botonCargarTarjeta";
-            this.botonCargarTarjeta.Size = new System.Drawing.Size(75, 23);
+            this.botonCargarTarjeta.Size = new System.Drawing.Size(98, 40);
             this.botonCargarTarjeta.TabIndex = 14;
             this.botonCargarTarjeta.Text = "Cargar";
-            this.botonCargarTarjeta.UseVisualStyleBackColor = true;
+            this.botonCargarTarjeta.UseVisualStyleBackColor = false;
             this.botonCargarTarjeta.Click += new System.EventHandler(this.botonCargarTarjeta_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(128, 345);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 13);
+            this.label8.Size = new System.Drawing.Size(132, 22);
             this.label8.TabIndex = 15;
             this.label8.Text = "Tipo de tarjeta";
             // 
@@ -232,7 +245,7 @@
             this.comboBoxTipoTarjeta.Items.AddRange(new object[] {
             "Crédito",
             "Débito"});
-            this.comboBoxTipoTarjeta.Location = new System.Drawing.Point(337, 345);
+            this.comboBoxTipoTarjeta.Location = new System.Drawing.Point(337, 353);
             this.comboBoxTipoTarjeta.Name = "comboBoxTipoTarjeta";
             this.comboBoxTipoTarjeta.Size = new System.Drawing.Size(121, 21);
             this.comboBoxTipoTarjeta.TabIndex = 16;
@@ -242,7 +255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.comboBoxTipoTarjeta);
             this.Controls.Add(this.label8);

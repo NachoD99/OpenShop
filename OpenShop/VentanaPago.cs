@@ -14,7 +14,8 @@ namespace OpenShop
     public partial class VentanaPago : Form
     {
         OrdenCompra OrdenJson = new OrdenCompra();
-        Pago pago = new Pago();
+
+        public static long CodigoVerificacion { get; set; }
 
         public VentanaPago()
         {
@@ -25,23 +26,24 @@ namespace OpenShop
 
         private void VentanaPago_Load(object sender, EventArgs e)
         {
-            
 
             OrdenJson = OrdenJson.obtenerDatosOrdenDeCompra();
 
-            labelMonto.Text ="Su monto a pagar es: "+ pago.sumarTotalDeCompra(OrdenJson);
+            labelMonto.Text ="Su monto a pagar es: "+ OrdenJson.Monto;
 
             for (int i = 0; i < OrdenJson.Cliente.Tarjeta.Count(); i++)
             {
                 if (OrdenJson.Cliente.Tarjeta.ElementAt(i).TipoTarjeta == "Crédito")
                 {
-                    comboTarjetaCredito.Items.Add(OrdenJson.Cliente.Tarjeta.ElementAt(i).NumeroDeTarjeta);
+                    comboTarjetaCredito.Items.Add(OrdenJson.Cliente.Tarjeta.ElementAt(i).EntidadEmisora);
                 }
                 if (OrdenJson.Cliente.Tarjeta.ElementAt(i).TipoTarjeta == "Débito")
                 {
-                    comboTarjetaDebito.Items.Add(OrdenJson.Cliente.Tarjeta.ElementAt(i).NumeroDeTarjeta);
+                    comboTarjetaDebito.Items.Add(OrdenJson.Cliente.Tarjeta.ElementAt(i).EntidadEmisora);
                 }
             }
+
+
         }
 
         private void botonVolver_Click(object sender, EventArgs e)
@@ -64,20 +66,28 @@ namespace OpenShop
 
         private void botonPagar_Click(object sender, EventArgs e)
         {
+            var rand = new Random();
+
             if (opcionEfectivo.Checked == true)
             {
-                //LLAMAR AL METODO DE PAGO EN EFECTIVO
                 
+                long codigoPago = rand.Next();
+                CodigoVerificacion = codigoPago;
+                MessageBox.Show("Usted ha pagado en efectivo.\nSu código de pago es: \n\t\t"+codigoPago.ToString()+"\nPor favor, anótelo para finalizar su compra");
             }
 
             if (tarjetaCredito.Checked == true)
             {
-                
+                long codigoPago = rand.Next();
+                CodigoVerificacion = codigoPago;
+                MessageBox.Show("Usted ha pagado con tarjeta de crédito.\nSu código de pago es: \n\t\t" + codigoPago.ToString() + "\nPor favor, anótelo para finalizar su compra");
             }
 
             if (tarjetaDebito.Checked == true)
             {
-                
+                long codigoPago = rand.Next();
+                CodigoVerificacion = codigoPago;
+                MessageBox.Show("Usted ha pagado con tarjeta de débito.\nSu código de pago es: \n\t\t" + codigoPago.ToString() + "\nPor favor, anótelo para finalizar su compra");
             }
         }
 
@@ -97,6 +107,26 @@ namespace OpenShop
 
             ConfirmacionCompra confirmacionCompra = new ConfirmacionCompra();
             confirmacionCompra.Show();
+        }
+
+        private void opcionEfectivo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tarjetaCredito_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelMonto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

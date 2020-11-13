@@ -45,70 +45,83 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 33);
+            this.label1.Font = new System.Drawing.Font("Felix Titling", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(265, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 25);
+            this.label1.Size = new System.Drawing.Size(218, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Elija su método de pago";
+            this.label1.Text = "Método de pago";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // opcionEfectivo
             // 
             this.opcionEfectivo.AutoSize = true;
-            this.opcionEfectivo.Location = new System.Drawing.Point(77, 120);
+            this.opcionEfectivo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opcionEfectivo.Location = new System.Drawing.Point(41, 120);
             this.opcionEfectivo.Name = "opcionEfectivo";
-            this.opcionEfectivo.Size = new System.Drawing.Size(64, 17);
+            this.opcionEfectivo.Size = new System.Drawing.Size(95, 26);
             this.opcionEfectivo.TabIndex = 1;
             this.opcionEfectivo.TabStop = true;
             this.opcionEfectivo.Text = "Efectivo";
             this.opcionEfectivo.UseVisualStyleBackColor = true;
+            this.opcionEfectivo.CheckedChanged += new System.EventHandler(this.opcionEfectivo_CheckedChanged);
             // 
             // botonPagar
             // 
-            this.botonPagar.Location = new System.Drawing.Point(77, 320);
+            this.botonPagar.BackColor = System.Drawing.Color.Black;
+            this.botonPagar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonPagar.ForeColor = System.Drawing.Color.White;
+            this.botonPagar.Location = new System.Drawing.Point(296, 276);
             this.botonPagar.Name = "botonPagar";
-            this.botonPagar.Size = new System.Drawing.Size(75, 23);
+            this.botonPagar.Size = new System.Drawing.Size(111, 41);
             this.botonPagar.TabIndex = 3;
-            this.botonPagar.Text = "PAGAR";
-            this.botonPagar.UseVisualStyleBackColor = true;
+            this.botonPagar.Text = "Pagar";
+            this.botonPagar.UseVisualStyleBackColor = false;
             this.botonPagar.Click += new System.EventHandler(this.botonPagar_Click);
             // 
             // botonVolver
             // 
-            this.botonVolver.Location = new System.Drawing.Point(659, 399);
+            this.botonVolver.BackColor = System.Drawing.Color.Black;
+            this.botonVolver.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonVolver.ForeColor = System.Drawing.Color.White;
+            this.botonVolver.Location = new System.Drawing.Point(12, 276);
             this.botonVolver.Name = "botonVolver";
-            this.botonVolver.Size = new System.Drawing.Size(75, 23);
+            this.botonVolver.Size = new System.Drawing.Size(119, 41);
             this.botonVolver.TabIndex = 4;
-            this.botonVolver.Text = "VOLVER";
-            this.botonVolver.UseVisualStyleBackColor = true;
+            this.botonVolver.Text = "Volver";
+            this.botonVolver.UseVisualStyleBackColor = false;
             this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
             // 
             // tarjetaCredito
             // 
             this.tarjetaCredito.AutoSize = true;
-            this.tarjetaCredito.Location = new System.Drawing.Point(77, 170);
+            this.tarjetaCredito.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tarjetaCredito.Location = new System.Drawing.Point(183, 120);
             this.tarjetaCredito.Name = "tarjetaCredito";
-            this.tarjetaCredito.Size = new System.Drawing.Size(109, 17);
+            this.tarjetaCredito.Size = new System.Drawing.Size(179, 26);
             this.tarjetaCredito.TabIndex = 5;
             this.tarjetaCredito.TabStop = true;
             this.tarjetaCredito.Text = "Tarjeta de Crédito";
             this.tarjetaCredito.UseVisualStyleBackColor = true;
+            this.tarjetaCredito.CheckedChanged += new System.EventHandler(this.tarjetaCredito_CheckedChanged_1);
             // 
             // comboTarjetaDebito
             // 
+            this.comboTarjetaDebito.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTarjetaDebito.FormattingEnabled = true;
-            this.comboTarjetaDebito.Location = new System.Drawing.Point(210, 221);
+            this.comboTarjetaDebito.Location = new System.Drawing.Point(417, 170);
             this.comboTarjetaDebito.Name = "comboTarjetaDebito";
-            this.comboTarjetaDebito.Size = new System.Drawing.Size(121, 21);
+            this.comboTarjetaDebito.Size = new System.Drawing.Size(121, 27);
             this.comboTarjetaDebito.TabIndex = 8;
             this.comboTarjetaDebito.Text = "Tarjetas";
             // 
             // tarjetaDebito
             // 
             this.tarjetaDebito.AutoSize = true;
-            this.tarjetaDebito.Location = new System.Drawing.Point(77, 221);
+            this.tarjetaDebito.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tarjetaDebito.Location = new System.Drawing.Point(417, 120);
             this.tarjetaDebito.Name = "tarjetaDebito";
-            this.tarjetaDebito.Size = new System.Drawing.Size(113, 17);
+            this.tarjetaDebito.Size = new System.Drawing.Size(181, 26);
             this.tarjetaDebito.TabIndex = 7;
             this.tarjetaDebito.TabStop = true;
             this.tarjetaDebito.Text = "Tarjetda de Débito";
@@ -116,48 +129,57 @@
             // 
             // comboTarjetaCredito
             // 
+            this.comboTarjetaCredito.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTarjetaCredito.FormattingEnabled = true;
-            this.comboTarjetaCredito.Location = new System.Drawing.Point(210, 170);
+            this.comboTarjetaCredito.Location = new System.Drawing.Point(183, 170);
             this.comboTarjetaCredito.Name = "comboTarjetaCredito";
-            this.comboTarjetaCredito.Size = new System.Drawing.Size(121, 21);
+            this.comboTarjetaCredito.Size = new System.Drawing.Size(121, 27);
             this.comboTarjetaCredito.TabIndex = 6;
             this.comboTarjetaCredito.Text = "Tarjetas";
             // 
             // botonConfirmar
             // 
-            this.botonConfirmar.Location = new System.Drawing.Point(437, 399);
+            this.botonConfirmar.BackColor = System.Drawing.Color.Black;
+            this.botonConfirmar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonConfirmar.ForeColor = System.Drawing.Color.White;
+            this.botonConfirmar.Location = new System.Drawing.Point(548, 276);
             this.botonConfirmar.Name = "botonConfirmar";
-            this.botonConfirmar.Size = new System.Drawing.Size(150, 23);
+            this.botonConfirmar.Size = new System.Drawing.Size(152, 41);
             this.botonConfirmar.TabIndex = 10;
-            this.botonConfirmar.Text = "Confirmar medio de pago";
-            this.botonConfirmar.UseVisualStyleBackColor = true;
+            this.botonConfirmar.Text = "Siguiente";
+            this.botonConfirmar.UseVisualStyleBackColor = false;
             this.botonConfirmar.Click += new System.EventHandler(this.botonConfirmar_Click);
             // 
             // botonAgregarTarjeta
             // 
-            this.botonAgregarTarjeta.Location = new System.Drawing.Point(363, 194);
+            this.botonAgregarTarjeta.BackColor = System.Drawing.Color.Black;
+            this.botonAgregarTarjeta.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonAgregarTarjeta.ForeColor = System.Drawing.Color.White;
+            this.botonAgregarTarjeta.Location = new System.Drawing.Point(592, 161);
             this.botonAgregarTarjeta.Name = "botonAgregarTarjeta";
-            this.botonAgregarTarjeta.Size = new System.Drawing.Size(124, 23);
+            this.botonAgregarTarjeta.Size = new System.Drawing.Size(124, 33);
             this.botonAgregarTarjeta.TabIndex = 9;
             this.botonAgregarTarjeta.Text = "Agregar Tarjeta";
-            this.botonAgregarTarjeta.UseVisualStyleBackColor = true;
+            this.botonAgregarTarjeta.UseVisualStyleBackColor = false;
             this.botonAgregarTarjeta.Click += new System.EventHandler(this.botonAgregarTarjeta_Click);
             // 
             // labelMonto
             // 
             this.labelMonto.AutoSize = true;
-            this.labelMonto.Location = new System.Drawing.Point(77, 84);
+            this.labelMonto.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMonto.Location = new System.Drawing.Point(37, 81);
             this.labelMonto.Name = "labelMonto";
-            this.labelMonto.Size = new System.Drawing.Size(108, 13);
+            this.labelMonto.Size = new System.Drawing.Size(182, 22);
             this.labelMonto.TabIndex = 11;
             this.labelMonto.Text = "Su monto a pagar es:";
+            this.labelMonto.Click += new System.EventHandler(this.labelMonto_Click);
             // 
             // VentanaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(747, 329);
             this.Controls.Add(this.labelMonto);
             this.Controls.Add(this.botonConfirmar);
             this.Controls.Add(this.botonAgregarTarjeta);

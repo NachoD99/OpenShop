@@ -23,11 +23,10 @@ namespace OpenShop
         {
             OrdenCompra OrdenJson = new OrdenCompra();
             OrdenJson = OrdenJson.obtenerDatosOrdenDeCompra();
-
-            labelCliente.Text = "Cliente: "+OrdenJson.Cliente.Nombre +" "+ OrdenJson.Cliente.Apellido;
            
-            listaDeCompra.DataSource = OrdenJson.ArticulosVendidos;
+            labelCliente.Text = "Cliente: "+OrdenJson.Cliente.Nombre +" "+ OrdenJson.Cliente.Apellido;
 
+            listaDeCompra.DataSource = OrdenJson.ArticulosVendidos;
         }
 
         private void botonPagar_Click(object sender, EventArgs e)

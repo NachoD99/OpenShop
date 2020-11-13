@@ -40,21 +40,24 @@
             // labelCliente
             // 
             this.labelCliente.AutoSize = true;
-            this.labelCliente.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCliente.Location = new System.Drawing.Point(38, 91);
+            this.labelCliente.Font = new System.Drawing.Font("Felix Titling", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCliente.Location = new System.Drawing.Point(12, 91);
             this.labelCliente.Name = "labelCliente";
-            this.labelCliente.Size = new System.Drawing.Size(88, 24);
+            this.labelCliente.Size = new System.Drawing.Size(113, 24);
             this.labelCliente.TabIndex = 0;
             this.labelCliente.Text = "Cliente: ";
             // 
             // botonPagar
             // 
-            this.botonPagar.Location = new System.Drawing.Point(648, 400);
+            this.botonPagar.BackColor = System.Drawing.Color.Black;
+            this.botonPagar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonPagar.ForeColor = System.Drawing.Color.White;
+            this.botonPagar.Location = new System.Drawing.Point(620, 388);
             this.botonPagar.Name = "botonPagar";
-            this.botonPagar.Size = new System.Drawing.Size(102, 33);
+            this.botonPagar.Size = new System.Drawing.Size(130, 45);
             this.botonPagar.TabIndex = 2;
-            this.botonPagar.Text = "Pagar";
-            this.botonPagar.UseVisualStyleBackColor = true;
+            this.botonPagar.Text = "Siguiente";
+            this.botonPagar.UseVisualStyleBackColor = false;
             this.botonPagar.Click += new System.EventHandler(this.botonPagar_Click);
             // 
             // listaDeCompra
@@ -62,30 +65,33 @@
             this.listaDeCompra.AllowUserToAddRows = false;
             this.listaDeCompra.AllowUserToDeleteRows = false;
             this.listaDeCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaDeCompra.Location = new System.Drawing.Point(35, 118);
+            this.listaDeCompra.Location = new System.Drawing.Point(12, 118);
             this.listaDeCompra.Name = "listaDeCompra";
             this.listaDeCompra.ReadOnly = true;
-            this.listaDeCompra.Size = new System.Drawing.Size(580, 209);
+            this.listaDeCompra.Size = new System.Drawing.Size(760, 245);
             this.listaDeCompra.TabIndex = 3;
             // 
             // botonSalir
             // 
-            this.botonSalir.Location = new System.Drawing.Point(35, 400);
+            this.botonSalir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.botonSalir.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonSalir.ForeColor = System.Drawing.Color.White;
+            this.botonSalir.Location = new System.Drawing.Point(35, 388);
             this.botonSalir.Name = "botonSalir";
-            this.botonSalir.Size = new System.Drawing.Size(91, 33);
+            this.botonSalir.Size = new System.Drawing.Size(113, 45);
             this.botonSalir.TabIndex = 4;
             this.botonSalir.Text = "Salir";
-            this.botonSalir.UseVisualStyleBackColor = true;
+            this.botonSalir.UseVisualStyleBackColor = false;
             this.botonSalir.Click += new System.EventHandler(this.botonSalir_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Engravers MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(25, 18);
+            this.label1.Font = new System.Drawing.Font("Felix Titling", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(95, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(747, 56);
+            this.label1.Size = new System.Drawing.Size(580, 57);
             this.label1.TabIndex = 5;
             this.label1.Text = "RESUMEN DE COMPRA";
             // 
@@ -93,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.botonSalir);

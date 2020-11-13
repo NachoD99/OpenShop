@@ -13,15 +13,19 @@ namespace OpenShop
         public List<ArticulosVendidos> ArticulosVendidos { get; set; } = new List<ArticulosVendidos>();
         public Cliente Cliente { get; set; }
         public int IdVenta { get; set; }
+        public DateTime FechaVenta { get; set; }
+        public decimal Monto { get; set; }
         static public OrdenCompra OrdenJson { get; set; } = new OrdenCompra();
 
         public OrdenCompra() { }
-        public OrdenCompra(int IdOrden, List<ArticulosVendidos> ArticulosVendidos, Cliente Cliente, int IdVenta)
+        public OrdenCompra(int IdOrden, List<ArticulosVendidos> ArticulosVendidos, Cliente Cliente, int IdVenta, DateTime FechaVenta, decimal Monto)
         {
             this.IdOrden = IdOrden;
             this.ArticulosVendidos = ArticulosVendidos;
             this.Cliente = Cliente;
             this.IdVenta = IdVenta;
+            this.FechaVenta = FechaVenta;
+            this.Monto = Monto;
         }
 
         public OrdenCompra obtenerDatosOrdenDeCompra()
@@ -34,11 +38,6 @@ namespace OpenShop
             }
             
             return OrdenJson;
-        }
-
-        public void mostrarArchivoJson()
-        {
-           
         }
     }
 }

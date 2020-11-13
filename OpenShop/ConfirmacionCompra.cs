@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace OpenShop
     public partial class ConfirmacionCompra : Form
     {
         OrdenCompra OrdenJson = new OrdenCompra();
+        Pago pago = new Pago();
 
         public ConfirmacionCompra()
         {
@@ -21,17 +23,41 @@ namespace OpenShop
 
         private void ConfirmacionCompra_Load(object sender, EventArgs e)
         {
+            botonConfirmar.Enabled = false;
+
             OrdenJson = OrdenJson.obtenerDatosOrdenDeCompra();
 
             dataGridViewArticulos.DataSource = OrdenJson.ArticulosVendidos;
+            /*
+            int n = 0;
+             foreach (var i in OrdenJson.ArticulosVendidos)
+            {
+                dataGridViewArticulos.Rows[n].Cells[0].Value = i.Nombre;
+                dataGridViewArticulos.Rows[n].Cells[1].Value = i.Descripcion;
+                dataGridViewArticulos.Rows[n].Cells[2].Value = i.Marca;
+                dataGridViewArticulos.Rows[n].Cells[3].Value = i.Precio;
+                
+                n++;
+            }
+             */
+            
 
-            labelNombre.Text = "Nombre: " + OrdenJson.Cliente.Nombre + " " + OrdenJson.Cliente.Apellido;
+
+
+            labelNombre.Text = "Nombre: " + OrdenJson.Cliente.Nombre;
+            labelApellido.Text = "Apellido: " +OrdenJson.Cliente.Apellido;
+            labelDNI.Text = "DNI: " + OrdenJson.Cliente.Dni;
 
             labelProvincia.Text = "Provincia: " + OrdenJson.Cliente.Provincia;
 
             labelCiudad.Text = "Ciudad: " + OrdenJson.Cliente.Ciudad;
 
             labelDireccion.Text = "Dirección: " + OrdenJson.Cliente.Domicilio;
+
+            labelMontoPagado.Text = "Monto total: $" + OrdenJson.Monto;
+
+            pago.IdPago = 1000;
+            pago.Monto = OrdenJson.Monto;
         }
 
         private void botonVolver_Click(object sender, EventArgs e)
@@ -42,6 +68,29 @@ namespace OpenShop
             ventanaPago.Show();
         }
 
-    
+        private void botonConfirmar_Click(object sender, EventArgs e)
+        {
+            OrdenPaga ordenConfirmada = new OrdenPaga(pago, OrdenJson);
+
+            var ordenEnArchivoJson = JsonConvert.SerializeObject(ordenConfirmada, Formatting.Indented);
+            System.IO.File.WriteAllText("orden.json", ordenEnArchivoJson);
+
+            MessageBox.Show("Su compra fue registrada con éxito.\n¡Muchas gracias por comprar en Open Shop!");
+            
+        }
+
+        private void botonOK_Click(object sender, EventArgs e)
+        {
+            if (VentanaPago.CodigoVerificacion == long.Parse(textBoxConfirmacion.Text))
+            {
+                botonConfirmar.Enabled = true;
+
+                MessageBox.Show("Código correcto!");
+            }
+            else
+            {
+                MessageBox.Show("Código incorrecto, por favor intente nuevamente.");
+            }
+        }
     }
 }

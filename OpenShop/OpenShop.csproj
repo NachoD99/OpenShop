@@ -120,10 +120,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icono.ico" />
+    <None Include="Resources\OPEN SHOP %281%29.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\OPEN SHOP %281%29.ico" />
+    <None Include="Resources\OPEN SHOP %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OPENSHOP.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OPENSHOP.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
