@@ -23,11 +23,11 @@ namespace OpenShop
         }
 
         // PARA SERIALIZAR LA FACTURA
-        //public OrdenPaga(OrdenCompra OrdenCompra, Pago Pago)
-        //{
-        //    this.OrdenCompra = OrdenCompra;
-        //    this.Pago = Pago;
-        //}
+        public OrdenPaga(OrdenCompra OrdenCompra, Pago Pago)
+        {
+            this.OrdenCompra = OrdenCompra;
+            this.Pago = Pago;
+        }
 
         OrdenCompra OrdenJson = new OrdenCompra();
         

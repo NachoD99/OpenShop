@@ -28,18 +28,7 @@ namespace OpenShop
             OrdenJson = OrdenJson.obtenerDatosOrdenDeCompra();
 
             dataGridViewArticulos.DataSource = OrdenJson.ArticulosVendidos;
-            /*
-            int n = 0;
-             foreach (var i in OrdenJson.ArticulosVendidos)
-            {
-                dataGridViewArticulos.Rows[n].Cells[0].Value = i.Nombre;
-                dataGridViewArticulos.Rows[n].Cells[1].Value = i.Descripcion;
-                dataGridViewArticulos.Rows[n].Cells[2].Value = i.Marca;
-                dataGridViewArticulos.Rows[n].Cells[3].Value = i.Precio;
-                
-                n++;
-            }
-             */
+           
             labelNombre.Text = "Nombre: " + OrdenJson.Cliente.Nombre;
             labelApellido.Text = "Apellido: " +OrdenJson.Cliente.Apellido;
             labelDNI.Text = "DNI: " + OrdenJson.Cliente.Dni;
@@ -52,16 +41,6 @@ namespace OpenShop
 
             labelMontoPagado.Text = "Monto total: $" + OrdenJson.Monto;
 
-            
-            if (VentanaPago.MetodoElegido == "Efectivo")
-            {
-                Pago Pago = new Pago(OrdenJson, true);
-            }
-            
-            if (VentanaPago.MetodoElegido == "Tarjeta de crédito")
-            {
-                
-            }
         }
 
         private void botonVolver_Click(object sender, EventArgs e)
@@ -74,16 +53,29 @@ namespace OpenShop
 
         private void botonConfirmar_Click(object sender, EventArgs e)
         {
+            Pago pago = new Pago();
+            bool metodoDePagoSeleccionado = false;
 
+            if (VentanaPago.MetodoElegido == "Efectivo")
+            {
+                metodoDePagoSeleccionado = true;
+                pago.generarPago(metodoDePagoSeleccionado, OrdenJson, VentanaPago.IndiceSeleccionado);
+            }
+
+            if (VentanaPago.MetodoElegido == "Tarjeta de crédito" || VentanaPago.MetodoElegido == "Tarjeta de débito")
+            {
+                metodoDePagoSeleccionado = false;
+                pago.generarPago(metodoDePagoSeleccionado, OrdenJson, VentanaPago.IndiceSeleccionado);
+            }
 
             OrdenPaga ordenParaCarrito = new OrdenPaga();
 
             ordenParaCarrito.generarOrdenACarrito();
+            
+            OrdenPaga factura = new OrdenPaga(OrdenJson, pago);
 
-            //OrdenPaga factura = new OrdenPaga(OrdenJson, Pago);
-
-            //var facturaEnArchivo = JsonConvert.SerializeObject(ordenConfirmada, Formatting.Indented);
-            //System.IO.File.WriteAllText("factura.json", facturaEnArchivo);
+            var facturaEnArchivo = JsonConvert.SerializeObject(factura, Formatting.Indented);
+            System.IO.File.WriteAllText("factura.json", facturaEnArchivo);
 
             MessageBox.Show("Su compra fue registrada con éxito.\n¡Muchas gracias por comprar en Open Shop!");
             

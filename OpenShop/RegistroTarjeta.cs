@@ -78,11 +78,19 @@ namespace OpenShop
                 else errorEntidad.Clear();
             }
         }
-
-        private void fechaIngresada_TextChanged(object sender, EventArgs e)
+        private void fechaIngresada_ValueChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(fechaIngresada.Text)) errorFecha.SetError(fechaIngresada, "Debe introducir una fecha");
-            else errorFecha.Clear();
+            if (fechaIngresada.Value.Year > DateTime.Today.Year)
+            {
+                if (fechaIngresada.Value.Month > DateTime.Today.Month)
+                {
+                    errorFecha.SetError(fechaIngresada, "La fecha de vencimiento no puede ser menor a la fecha actual");
+                }
+            }
+            else
+            {
+                errorFecha.Clear();
+            }
             
         }
 

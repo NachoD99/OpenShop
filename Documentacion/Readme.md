@@ -18,17 +18,17 @@ la cátedra **Diseño de Sistemas** de la **UTN Facultad Regional San Francisco**.
 ## OBJETIVOS
 
 ### Aplicar conocimientos adquiridos en:
--[x] Programación orientada a objetos.
--[x] Diseño de procedimientos.
--[x] Patrones de diseño.
--[x] Proceso unificado.
--[x] Persistencia.
--[x] Testing.
--[x] Desarrollos de proyectos simulando ambientes de trabajo en equipo.
+- [x] Programación orientada a objetos.
+- [x] Diseño de procedimientos.
+- [x] Patrones de diseño.
+- [x] Proceso unificado.
+- [x] Persistencia.
+- [x] Testing.
+- [x] Desarrollos de proyectos simulando ambientes de trabajo en equipo.
 
 ### Objetivos del trabajo
--[x] Implementar una aplicación de E-commerce.
--[x] Segmentar el proyecto en áreas:
+- [x] Implementar una aplicación de E-commerce.
+- [x] Segmentar el proyecto en áreas:
 	*Catálogo
 	*Carrito
 	*Cobranza

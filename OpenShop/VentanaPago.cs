@@ -17,6 +17,7 @@ namespace OpenShop
 
         public static long CodigoVerificacion { get; set; }
         public static string MetodoElegido { get; set; }
+        public static int IndiceSeleccionado { get; set; }
 
         public VentanaPago()
         {
@@ -82,7 +83,8 @@ namespace OpenShop
             {
                 long codigoPago = rand.Next();
                 CodigoVerificacion = codigoPago;
-                MetodoElegido = "Tarjeta de crédito";
+                MetodoElegido = comboTarjetaCredito.SelectedIndex.ToString();
+                IndiceSeleccionado = comboTarjetaCredito.SelectedIndex;
                 MessageBox.Show("Usted ha pagado con tarjeta de crédito.\nSu código de pago es: \n\t\t" + codigoPago.ToString() + "\nPor favor, anótelo para finalizar su compra");
             }
 
@@ -91,6 +93,7 @@ namespace OpenShop
                 long codigoPago = rand.Next();
                 CodigoVerificacion = codigoPago;
                 MetodoElegido = comboTarjetaDebito.SelectedIndex.ToString();
+                IndiceSeleccionado = comboTarjetaDebito.SelectedIndex;
                 MessageBox.Show("Usted ha pagado con tarjeta de débito.\nSu código de pago es: \n\t\t" + codigoPago.ToString() + "\nPor favor, anótelo para finalizar su compra");
             }
         }

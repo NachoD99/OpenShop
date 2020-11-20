@@ -8,20 +8,36 @@ namespace OpenShop
 {
     public class Pago
     {
-        public OrdenCompra OrdenCompra { get; set; }
         public bool Efectivo { get; set; }
         public Tarjeta Tarjeta { get; set; }
+        public string TipoTarjeta { get; set; }
 
-        public Pago(OrdenCompra OrdenCompra, bool Efectivo)
+        public Pago(bool Efectivo)
         {
-            this.OrdenCompra = OrdenCompra;
             this.Efectivo = Efectivo;
         }
-        public Pago(OrdenCompra OrdenCompra, Tarjeta Tarjeta)
+        public Pago(Tarjeta Tarjeta, string TipoTarjeta)
         {
-            this.OrdenCompra = OrdenCompra;
             this.Tarjeta = Tarjeta;
+            this.TipoTarjeta = TipoTarjeta;
         }
         public Pago() { }
+
+        OrdenCompra OrdenJson = new OrdenCompra();
+        public void generarPago(bool metodoSeleccionado, OrdenCompra ordenJson, int tipoTarjeta)
+        {
+            ordenJson = OrdenJson.obtenerDatosOrdenDeCompra();
+
+            if(metodoSeleccionado)
+            {
+                Pago pagoRealizado = new Pago(true);
+            }
+            else
+            {
+                Tarjeta tarjeta = ordenJson.Cliente.Tarjeta.ElementAt(tipoTarjeta);
+                Pago pagoRealizado = new Pago(tarjeta, tarjeta.EntidadEmisora);
+            }
+            
+        }
     }
 }

@@ -41,7 +41,6 @@
             this.nombreIngresado = new System.Windows.Forms.TextBox();
             this.codigoSeguridadIngresado = new System.Windows.Forms.TextBox();
             this.entidadIngresada = new System.Windows.Forms.TextBox();
-            this.fechaIngresada = new System.Windows.Forms.TextBox();
             this.dniIngresado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.errorNumero = new System.Windows.Forms.ErrorProvider(this.components);
@@ -53,6 +52,7 @@
             this.botonCargarTarjeta = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxTipoTarjeta = new System.Windows.Forms.ComboBox();
+            this.fechaIngresada = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.errorNumero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTitular)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorCodigo)).BeginInit();
@@ -138,7 +138,7 @@
             // 
             this.numeroIngresado.Location = new System.Drawing.Point(337, 68);
             this.numeroIngresado.Name = "numeroIngresado";
-            this.numeroIngresado.Size = new System.Drawing.Size(121, 20);
+            this.numeroIngresado.Size = new System.Drawing.Size(200, 20);
             this.numeroIngresado.TabIndex = 7;
             this.numeroIngresado.TextChanged += new System.EventHandler(this.numeroIngresado_TextChanged);
             // 
@@ -146,7 +146,7 @@
             // 
             this.nombreIngresado.Location = new System.Drawing.Point(337, 115);
             this.nombreIngresado.Name = "nombreIngresado";
-            this.nombreIngresado.Size = new System.Drawing.Size(121, 20);
+            this.nombreIngresado.Size = new System.Drawing.Size(200, 20);
             this.nombreIngresado.TabIndex = 8;
             this.nombreIngresado.TextChanged += new System.EventHandler(this.nombreIngresado_TextChanged);
             // 
@@ -154,7 +154,7 @@
             // 
             this.codigoSeguridadIngresado.Location = new System.Drawing.Point(337, 162);
             this.codigoSeguridadIngresado.Name = "codigoSeguridadIngresado";
-            this.codigoSeguridadIngresado.Size = new System.Drawing.Size(121, 20);
+            this.codigoSeguridadIngresado.Size = new System.Drawing.Size(200, 20);
             this.codigoSeguridadIngresado.TabIndex = 9;
             this.codigoSeguridadIngresado.TextChanged += new System.EventHandler(this.codigoSeguridadIngresado_TextChanged);
             // 
@@ -162,23 +162,15 @@
             // 
             this.entidadIngresada.Location = new System.Drawing.Point(337, 208);
             this.entidadIngresada.Name = "entidadIngresada";
-            this.entidadIngresada.Size = new System.Drawing.Size(121, 20);
+            this.entidadIngresada.Size = new System.Drawing.Size(200, 20);
             this.entidadIngresada.TabIndex = 10;
             this.entidadIngresada.TextChanged += new System.EventHandler(this.entidadIngresada_TextChanged);
-            // 
-            // fechaIngresada
-            // 
-            this.fechaIngresada.Location = new System.Drawing.Point(337, 254);
-            this.fechaIngresada.Name = "fechaIngresada";
-            this.fechaIngresada.Size = new System.Drawing.Size(121, 20);
-            this.fechaIngresada.TabIndex = 11;
-            this.fechaIngresada.TextChanged += new System.EventHandler(this.fechaIngresada_TextChanged);
             // 
             // dniIngresado
             // 
             this.dniIngresado.Location = new System.Drawing.Point(337, 304);
             this.dniIngresado.Name = "dniIngresado";
-            this.dniIngresado.Size = new System.Drawing.Size(121, 20);
+            this.dniIngresado.Size = new System.Drawing.Size(200, 20);
             this.dniIngresado.TabIndex = 12;
             this.dniIngresado.TextChanged += new System.EventHandler(this.dniIngresado_TextChanged);
             // 
@@ -247,9 +239,17 @@
             "Débito"});
             this.comboBoxTipoTarjeta.Location = new System.Drawing.Point(337, 353);
             this.comboBoxTipoTarjeta.Name = "comboBoxTipoTarjeta";
-            this.comboBoxTipoTarjeta.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTipoTarjeta.Size = new System.Drawing.Size(200, 21);
             this.comboBoxTipoTarjeta.TabIndex = 16;
             this.comboBoxTipoTarjeta.SelectedIndexChanged += new System.EventHandler(this.comboBoxTipoTarjeta_SelectedIndexChanged);
+            // 
+            // fechaIngresada
+            // 
+            this.fechaIngresada.Location = new System.Drawing.Point(337, 255);
+            this.fechaIngresada.Name = "fechaIngresada";
+            this.fechaIngresada.Size = new System.Drawing.Size(200, 20);
+            this.fechaIngresada.TabIndex = 17;
+            this.fechaIngresada.ValueChanged += new System.EventHandler(this.fechaIngresada_ValueChanged);
             // 
             // RegistroTarjeta
             // 
@@ -257,12 +257,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.fechaIngresada);
             this.Controls.Add(this.comboBoxTipoTarjeta);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.botonCargarTarjeta);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dniIngresado);
-            this.Controls.Add(this.fechaIngresada);
             this.Controls.Add(this.entidadIngresada);
             this.Controls.Add(this.codigoSeguridadIngresado);
             this.Controls.Add(this.nombreIngresado);
@@ -305,7 +305,6 @@
         private System.Windows.Forms.TextBox nombreIngresado;
         private System.Windows.Forms.TextBox codigoSeguridadIngresado;
         private System.Windows.Forms.TextBox entidadIngresada;
-        private System.Windows.Forms.TextBox fechaIngresada;
         private System.Windows.Forms.TextBox dniIngresado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider errorNumero;
@@ -317,5 +316,6 @@
         private System.Windows.Forms.Button botonCargarTarjeta;
         private System.Windows.Forms.ComboBox comboBoxTipoTarjeta;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker fechaIngresada;
     }
 }
