@@ -1,0 +1,87 @@
+{
+  "OrdenCompra": {
+    "ArticulosVendidos": [
+      {
+        "IdArticulo": 1,
+        "Nombre": "Iphone s6",
+        "Marca": "Apple",
+        "Cantidad": 1,
+        "Precio": 100000.00,
+        "Descripcion": "celular"
+      },
+      {
+        "IdArticulo": 2,
+        "Nombre": "Mouse Gamer",
+        "Marca": "Nisuta",
+        "Cantidad": 1,
+        "Precio": 850.00,
+        "Descripcion": "mouse alámbrico"
+      },
+      {
+        "IdArticulo": 3,
+        "Nombre": "Smart TV",
+        "Marca": "Samsung",
+        "Cantidad": 1,
+        "Precio": 75000.00,
+        "Descripcion": "Televisor 30' modelo 2019"
+      },
+      {
+        "IdArticulo": 4,
+        "Nombre": "Earbuds GT1",
+        "Marca": "Xiaomi",
+        "Cantidad": 1,
+        "Precio": 2500.00,
+        "Descripcion": "Auriculares Earbuds Haylou GT1 negros"
+      }
+    ],
+    "Cliente": {
+      "IdCliente": 1,
+      "Nombre": "Ignacio",
+      "Apellido": "Davanzo",
+      "Correo": "nachodavanzo@gmail.com",
+      "Dni": "42245506",
+      "Domicilio": "Larrea 692",
+      "Ciudad": "San Francisco",
+      "Provincia": "Córdoba",
+      "Tarjeta": [
+        {
+          "NumeroDeTarjeta": 1234567891234567,
+          "NombreTitular": "Ignacio",
+          "CodigoDeSeguridad": 123,
+          "EntidadEmisora": "Santander",
+          "FechaDeVencimiento": "12/22",
+          "DniTitular": 42245506,
+          "TipoTarjeta": "Débito",
+          "CantidadDeCuotas": 0,
+          "SaldoDisponible": 0.0
+        },
+        {
+          "NumeroDeTarjeta": 9876543211234567,
+          "NombreTitular": "Ignacio",
+          "CodigoDeSeguridad": 789,
+          "EntidadEmisora": "Macro",
+          "FechaDeVencimiento": "10/23",
+          "DniTitular": 42245506,
+          "TipoTarjeta": "Crédito",
+          "CantidadDeCuotas": 0,
+          "SaldoDisponible": 0.0
+        },
+        {
+          "NumeroDeTarjeta": 9274357891232563,
+          "NombreTitular": "Dante",
+          "CodigoDeSeguridad": 597,
+          "EntidadEmisora": "Cordoba",
+          "FechaDeVencimiento": "12/22",
+          "DniTitular": 39248557,
+          "TipoTarjeta": "Débito",
+          "CantidadDeCuotas": 0,
+          "SaldoDisponible": 0.0
+        }
+      ]
+    },
+    "FechaVenta": "2020-11-12T19:53:36.4220327-03:00",
+    "Monto": 178750.0
+  },
+  "EstadoConfirmacion": true,
+  "Pago": null
+}

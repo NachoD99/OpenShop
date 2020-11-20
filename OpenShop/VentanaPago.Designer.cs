@@ -51,7 +51,6 @@
             this.label1.Size = new System.Drawing.Size(218, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Método de pago";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // opcionEfectivo
             // 
@@ -64,7 +63,6 @@
             this.opcionEfectivo.TabStop = true;
             this.opcionEfectivo.Text = "Efectivo";
             this.opcionEfectivo.UseVisualStyleBackColor = true;
-            this.opcionEfectivo.CheckedChanged += new System.EventHandler(this.opcionEfectivo_CheckedChanged);
             // 
             // botonPagar
             // 
@@ -103,7 +101,6 @@
             this.tarjetaCredito.TabStop = true;
             this.tarjetaCredito.Text = "Tarjeta de Crédito";
             this.tarjetaCredito.UseVisualStyleBackColor = true;
-            this.tarjetaCredito.CheckedChanged += new System.EventHandler(this.tarjetaCredito_CheckedChanged_1);
             // 
             // comboTarjetaDebito
             // 
@@ -121,10 +118,10 @@
             this.tarjetaDebito.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tarjetaDebito.Location = new System.Drawing.Point(417, 120);
             this.tarjetaDebito.Name = "tarjetaDebito";
-            this.tarjetaDebito.Size = new System.Drawing.Size(181, 26);
+            this.tarjetaDebito.Size = new System.Drawing.Size(171, 26);
             this.tarjetaDebito.TabIndex = 7;
             this.tarjetaDebito.TabStop = true;
-            this.tarjetaDebito.Text = "Tarjetda de Débito";
+            this.tarjetaDebito.Text = "Tarjeta de Débito";
             this.tarjetaDebito.UseVisualStyleBackColor = true;
             // 
             // comboTarjetaCredito
@@ -169,10 +166,9 @@
             this.labelMonto.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMonto.Location = new System.Drawing.Point(37, 81);
             this.labelMonto.Name = "labelMonto";
-            this.labelMonto.Size = new System.Drawing.Size(182, 22);
+            this.labelMonto.Size = new System.Drawing.Size(197, 22);
             this.labelMonto.TabIndex = 11;
-            this.labelMonto.Text = "Su monto a pagar es:";
-            this.labelMonto.Click += new System.EventHandler(this.labelMonto_Click);
+            this.labelMonto.Text = "Su monto a pagar es: $";
             // 
             // VentanaPago
             // 

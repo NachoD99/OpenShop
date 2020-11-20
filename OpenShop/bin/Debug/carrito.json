@@ -1,6 +1,5 @@
 
     {
-    "IdVenta": 1,
     "ArticulosVendidos":
         [
             {
@@ -44,8 +43,6 @@
         "Nombre": "Ignacio",
         "Apellido": "Davanzo",
         "Correo": "nachodavanzo@gmail.com",
-        "Usuario": "Nacho Davanzo",
-        "Contraseña": "0123456789",
         "Dni": "42245506",
         "Domicilio": "Larrea 692",
 	"Ciudad": "San Francisco",
@@ -57,6 +54,7 @@
         	  "NombreTitular":"Ignacio",
         	  "CodigoDeSeguridad":123,
         	  "EntidadEmisora":"Santander",
+		  "SaldoDisponible": 200000,
         	  "FechaDeVencimiento":"12/22",
         	  "DniTitular":42245506,
         	  "TipoTarjeta":"Débito"
@@ -69,6 +67,15 @@
         	  "FechaDeVencimiento":"10/23",
         	  "DniTitular":42245506,
         	  "TipoTarjeta":"Crédito"
+		},
+		{
+		  "NumeroDeTarjeta":9274357891232563,
+        	  "NombreTitular":"Dante",
+        	  "CodigoDeSeguridad":597,
+        	  "EntidadEmisora":"Cordoba",
+        	  "FechaDeVencimiento":"12/22",
+        	  "DniTitular":39248557,
+        	  "TipoTarjeta":"Débito"
 		}
 		]
         }

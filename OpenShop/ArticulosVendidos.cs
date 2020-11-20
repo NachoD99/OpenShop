@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace OpenShop
 {
-    class ArticulosVendidos
+    public class ArticulosVendidos
     {
         public int IdArticulo { get; set; }
         public string Nombre { get; set; }

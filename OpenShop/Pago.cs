@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace OpenShop
 {
-    class Pago
+    public class Pago
     {
-        public int IdPago { get; set; }
-        public FormaPago FormaDePago { get; set; }
-        public decimal Monto { get; set; }
+        public OrdenCompra OrdenCompra { get; set; }
+        public bool Efectivo { get; set; }
+        public Tarjeta Tarjeta { get; set; }
 
-        public Pago(int IdPago, FormaPago FormaDePago, decimal Monto)
+        public Pago(OrdenCompra OrdenCompra, bool Efectivo)
         {
-            this.IdPago = IdPago;
-            this.FormaDePago = FormaDePago;
-            this.Monto = Monto;
+            this.OrdenCompra = OrdenCompra;
+            this.Efectivo = Efectivo;
+        }
+        public Pago(OrdenCompra OrdenCompra, Tarjeta Tarjeta)
+        {
+            this.OrdenCompra = OrdenCompra;
+            this.Tarjeta = Tarjeta;
         }
         public Pago() { }
     }

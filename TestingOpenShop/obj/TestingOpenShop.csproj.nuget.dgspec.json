@@ -4,6 +4,16 @@
     "C:\\Users\\usuario\\source\\repos\\OpenShop\\TestingOpenShop\\TestingOpenShop.csproj": {}
   },
   "projects": {
+    "C:\\Users\\usuario\\source\\repos\\OpenShop\\OpenShop\\OpenShop.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\usuario\\source\\repos\\OpenShop\\OpenShop\\OpenShop.csproj",
+        "projectName": "OpenShop",
+        "projectPath": "C:\\Users\\usuario\\source\\repos\\OpenShop\\OpenShop\\OpenShop.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
     "C:\\Users\\usuario\\source\\repos\\OpenShop\\TestingOpenShop\\TestingOpenShop.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -29,7 +39,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\usuario\\source\\repos\\OpenShop\\OpenShop\\OpenShop.csproj": {
+                "projectPath": "C:\\Users\\usuario\\source\\repos\\OpenShop\\OpenShop\\OpenShop.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -43,19 +57,27 @@
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.5.0, )"
+              "version": "[16.8.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             },
             "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[1.3.0, )"
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.4.0, )"
+              "version": "[2.4.1, )"
             },
             "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.4.0, )"
+              "version": "[2.4.3, )"
             }
           },
           "imports": [

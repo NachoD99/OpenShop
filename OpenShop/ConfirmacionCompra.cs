@@ -14,7 +14,7 @@ namespace OpenShop
     public partial class ConfirmacionCompra : Form
     {
         OrdenCompra OrdenJson = new OrdenCompra();
-        Pago pago = new Pago();
+        
 
         public ConfirmacionCompra()
         {
@@ -40,10 +40,6 @@ namespace OpenShop
                 n++;
             }
              */
-            
-
-
-
             labelNombre.Text = "Nombre: " + OrdenJson.Cliente.Nombre;
             labelApellido.Text = "Apellido: " +OrdenJson.Cliente.Apellido;
             labelDNI.Text = "DNI: " + OrdenJson.Cliente.Dni;
@@ -56,8 +52,16 @@ namespace OpenShop
 
             labelMontoPagado.Text = "Monto total: $" + OrdenJson.Monto;
 
-            pago.IdPago = 1000;
-            pago.Monto = OrdenJson.Monto;
+            
+            if (VentanaPago.MetodoElegido == "Efectivo")
+            {
+                Pago Pago = new Pago(OrdenJson, true);
+            }
+            
+            if (VentanaPago.MetodoElegido == "Tarjeta de crédito")
+            {
+                
+            }
         }
 
         private void botonVolver_Click(object sender, EventArgs e)
@@ -70,10 +74,16 @@ namespace OpenShop
 
         private void botonConfirmar_Click(object sender, EventArgs e)
         {
-            OrdenPaga ordenConfirmada = new OrdenPaga(pago, OrdenJson);
 
-            var ordenEnArchivoJson = JsonConvert.SerializeObject(ordenConfirmada, Formatting.Indented);
-            System.IO.File.WriteAllText("orden.json", ordenEnArchivoJson);
+
+            OrdenPaga ordenParaCarrito = new OrdenPaga();
+
+            ordenParaCarrito.generarOrdenACarrito();
+
+            //OrdenPaga factura = new OrdenPaga(OrdenJson, Pago);
+
+            //var facturaEnArchivo = JsonConvert.SerializeObject(ordenConfirmada, Formatting.Indented);
+            //System.IO.File.WriteAllText("factura.json", facturaEnArchivo);
 
             MessageBox.Show("Su compra fue registrada con éxito.\n¡Muchas gracias por comprar en Open Shop!");
             

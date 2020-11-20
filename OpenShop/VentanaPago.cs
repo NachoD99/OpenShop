@@ -16,6 +16,7 @@ namespace OpenShop
         OrdenCompra OrdenJson = new OrdenCompra();
 
         public static long CodigoVerificacion { get; set; }
+        public static string MetodoElegido { get; set; }
 
         public VentanaPago()
         {
@@ -29,7 +30,7 @@ namespace OpenShop
 
             OrdenJson = OrdenJson.obtenerDatosOrdenDeCompra();
 
-            labelMonto.Text ="Su monto a pagar es: "+ OrdenJson.Monto;
+            labelMonto.Text ="Su monto a pagar es: $"+ OrdenJson.Monto;
 
             for (int i = 0; i < OrdenJson.Cliente.Tarjeta.Count(); i++)
             {
@@ -73,6 +74,7 @@ namespace OpenShop
                 
                 long codigoPago = rand.Next();
                 CodigoVerificacion = codigoPago;
+                MetodoElegido = "Efectivo";
                 MessageBox.Show("Usted ha pagado en efectivo.\nSu código de pago es: \n\t\t"+codigoPago.ToString()+"\nPor favor, anótelo para finalizar su compra");
             }
 
@@ -80,6 +82,7 @@ namespace OpenShop
             {
                 long codigoPago = rand.Next();
                 CodigoVerificacion = codigoPago;
+                MetodoElegido = "Tarjeta de crédito";
                 MessageBox.Show("Usted ha pagado con tarjeta de crédito.\nSu código de pago es: \n\t\t" + codigoPago.ToString() + "\nPor favor, anótelo para finalizar su compra");
             }
 
@@ -87,6 +90,7 @@ namespace OpenShop
             {
                 long codigoPago = rand.Next();
                 CodigoVerificacion = codigoPago;
+                MetodoElegido = comboTarjetaDebito.SelectedIndex.ToString();
                 MessageBox.Show("Usted ha pagado con tarjeta de débito.\nSu código de pago es: \n\t\t" + codigoPago.ToString() + "\nPor favor, anótelo para finalizar su compra");
             }
         }
@@ -109,24 +113,7 @@ namespace OpenShop
             confirmacionCompra.Show();
         }
 
-        private void opcionEfectivo_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void tarjetaCredito_CheckedChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelMonto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

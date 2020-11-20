@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenShop
 {
-    class Tarjeta
+    public class Tarjeta
     {
         public long NumeroDeTarjeta { get; set; }
         public string NombreTitular { get; set; }
@@ -20,7 +20,7 @@ namespace OpenShop
         public int CantidadDeCuotas { get; set; }
 
         //Para tarjeta de débito
-        public int SaldoDisponible { get; set; }
+        public decimal SaldoDisponible { get; set; }
 
         public Tarjeta() { }
         public Tarjeta(long NumeroDeTarjeta, string NombreTitular, int CodigoDeSeguridad,
@@ -34,42 +34,18 @@ namespace OpenShop
             this.DniTitular = DniTitular;
             this.TipoTarjeta = TipoTarjeta;
         }
-        public void pagarConTarjeta(decimal montoTotal)
+
+        public Tarjeta(long NumeroDeTarjeta, string NombreTitular, int CodigoDeSeguridad,
+                     string EntidadEmisora, decimal SaldoDisponible,string FechaDeVencimiento, long DniTitular, string TipoTarjeta)
         {
-            System.Console.WriteLine("El monto a pagar es: " + montoTotal);
-            System.Console.WriteLine("Seleccione su tipo de tarjeta:\n1-Crédito\n2-Débito");
-            var opcionTarjeta = int.Parse(System.Console.ReadLine());
-
-            if (opcionTarjeta == 1)
-            {
-                System.Console.WriteLine("Seleccione la cantidad de cuotas que desea pagar:");
-                System.Console.WriteLine("a) 1\nb) 3\nc) 6\nd) 12");
-                string opcionCantidadCuotas = System.Console.ReadLine().ToString();
-
-                if (opcionCantidadCuotas.Contains('a'))
-                {
-                    System.Console.WriteLine("Pagará 1 cuota de: $" + montoTotal);
-                }
-
-                else if (opcionCantidadCuotas.Contains('b'))
-                {
-                    System.Console.WriteLine("Pagará 3 cuotas de: $" + (montoTotal / 3));
-                }
-
-                else if (opcionCantidadCuotas.Contains('c'))
-                {
-                    System.Console.WriteLine("Pagará 6 cuotas de: $" + (montoTotal / 6));
-                }
-
-                else if (opcionCantidadCuotas.Contains('d'))
-                {
-                    System.Console.WriteLine("Pagará 12 cuotas de: $" + (montoTotal / 12));
-                }
-            }
-            if (opcionTarjeta == 2)
-            {
-                System.Console.WriteLine("Su saldo en la cuenta es: $");
-            }
+            this.NumeroDeTarjeta = NumeroDeTarjeta;
+            this.NombreTitular = NombreTitular;
+            this.CodigoDeSeguridad = CodigoDeSeguridad;
+            this.EntidadEmisora = EntidadEmisora;
+            this.SaldoDisponible = SaldoDisponible;
+            this.FechaDeVencimiento = FechaDeVencimiento;
+            this.DniTitular = DniTitular;
+            this.TipoTarjeta = TipoTarjeta;
         }
     }
 }

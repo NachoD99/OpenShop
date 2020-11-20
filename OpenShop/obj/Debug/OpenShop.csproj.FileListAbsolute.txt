@@ -14,3 +14,11 @@ C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.VentanaPago.r
 C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.RegistroTarjeta.resources
 C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.ConfirmacionCompra.resources
 C:\Users\usuario\source\repos\OpenShop\OpenShop\obj\Debug\OpenShop.PaginaInicial.resources
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\xunit.abstractions.dll
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\xunit.assert.dll
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\xunit.core.dll
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\xunit.execution.desktop.dll
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\xunit.abstractions.xml
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\xunit.assert.xml
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\xunit.core.xml
+C:\Users\usuario\source\repos\OpenShop\OpenShop\bin\Debug\xunit.execution.desktop.xml
