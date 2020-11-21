@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using OpenShop;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace TestingOpenShop
@@ -49,6 +50,31 @@ namespace TestingOpenShop
             }
             Assert.True(esFechaMenorQueActual);
         }
+    }
+
+    public class TestsDeValidacionDeCampos
+    {
+        public OrdenCompra ordenJson = new OrdenCompra();
+        
+        
+        [Fact]
+        public void LaFechaDelJsonEsTipoValido()
+        {
+            Assert.IsType<DateTime>(ordenJson.FechaVenta);
+        }
+
+        [Fact]
+        public void ElMontoDelJsonEsTipoValido()
+        {
+            Assert.IsType<decimal>(ordenJson.Monto);
+        }
+
+        [Fact]
+        public void LaListaDelJsonEsTipoValido()
+        {
+            Assert.IsType<List<ArticulosVendidos>>(ordenJson.ArticulosVendidos);
+        }
+
     }
 
     public class TestDeEnvioDePedido

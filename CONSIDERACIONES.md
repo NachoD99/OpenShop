@@ -54,3 +54,6 @@ la compra.
 * Las órdenes de compra se manipulan en formato JSON.
 
 * A modo de poder trabajar con las órdenes en todos los proyectos, se ha utilizado la ruta c:\datos\nombreDelArchivo
+
+* La instancia de pago se genera en la ventana de confirmación de la compra junto con la orden de compra. No se instancia
+en la ventana de pago debido a que yo para confirmarlo debo introducir el código de seguridad en la ventana siguiente.

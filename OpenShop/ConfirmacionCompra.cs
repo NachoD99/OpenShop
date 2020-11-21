@@ -68,10 +68,12 @@ namespace OpenShop
                 pago.generarPago(metodoDePagoSeleccionado, OrdenJson, VentanaPago.IndiceSeleccionado);
             }
 
+            //Creacion de la orden paga para pasar a carrito
             OrdenPaga ordenParaCarrito = new OrdenPaga();
 
             ordenParaCarrito.generarOrdenACarrito();
             
+            //Creación de la factura para tener de comprobante
             OrdenPaga factura = new OrdenPaga(OrdenJson, pago);
 
             var facturaEnArchivo = JsonConvert.SerializeObject(factura, Formatting.Indented);
