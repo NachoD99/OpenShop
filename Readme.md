@@ -44,15 +44,15 @@ Esta implementación lleva a cabo la sección de **COBRANZAS**.
 
 ### REQUERIMIENTOS FUNCIONALES
 -------------------------------
-RF1- El sistema debe recibir la orden del área de Carrito.
-RF2- El sistema debe mostrar en pantalla la lista detallada con los productos a comprar.
-RF3- El sistema debe tener una ventana de elección de la forma de pago.
-RF4- El sistema debe permitir agregar una tarjeta de crédito/debito.
-RF5- El sistema debe generar un método de comprobación de que el pago fue realizado.
-RF6- El sistema debe confirmar la operación y generar un documento que será enviado al área de Despacho.
+* RF1- El sistema debe recibir la orden del área de Carrito.
+* RF2- El sistema debe mostrar en pantalla la lista detallada con los productos a comprar.
+* RF3- El sistema debe tener una ventana de elección de la forma de pago.
+* RF4- El sistema debe permitir agregar una tarjeta de crédito/debito.
+* RF5- El sistema debe generar un método de comprobación de que el pago fue realizado.
+* RF6- El sistema debe confirmar la operación y generar un documento que será enviado al área de Despacho.
 
 ### REQUERIMIENTOS NO FUNCIONALES
 ---------------------------------
-RNF1- El sistema debe ser fácil de usar.
-RNF2- El sistema debe funcionar en distintos tipos de sistemas operativos y plataformas de hardware.
-RNF3- El sistema no presentará problemas de manejo e implementación.
+* RNF1- El sistema debe ser fácil de usar.
+* RNF2- El sistema debe funcionar en distintos tipos de sistemas operativos y plataformas de hardware.
+* RNF3- El sistema no presentará problemas de manejo e implementación.
